@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: white;
+    font-family: 'Oxygen', sans-serif;
+    min-height: 100vh;
+    background:linear-gradient(30deg,#78fff0,#0090a8,#000030,#180078,#3018ff,#3018f0);
+    height: 5000px;
+    z-index: 0;
+    --nav-height:80px;
+    margin: 0;
+
+}
+.container{
+    z-index: 2;
+    padding-top: var(--nav-height);
+    
+}
+.navigation-bar{
+    height: var(--nav-height);
+    background: black;
+    position: fixed;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: 0.3s ease;
+
+}
+.nav{
+    height: var(--nav-height);
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    flex: 7;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0, 0,0.2);
+    transform: 0.2s ease;
+}
+.nav--hidden{
+    transform:translateY(calc(-1*var(--nav-height)));
+    box-shadow: none;
+    transition: 0.3s ease;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 8px;
+    margin: 0 1em;
+    font-weight: 600;
+}
+a:hover{
+    color:blueviolet
+}
+a::after{
+    position: absolute;
+    background-color: blueviolet;
+    height: 3px;    
+    width: 0;
+    left: 0;
+    content: "";
+    transition: transform 0.3s ease;
+    transform: scale(0);
+    bottom:calc(-0.1*var(--nav-height));
+    
+}
+a:hover::after{
+    width: 100%;
+    transform: scale(1);
+    cursor:pointer;
+}
+.logo_image{
+    height: calc(0.9*var(--nav-height));
+    width: auto;
+}
+.button{
+    display:block
+}
+.logo_name{
+
+}
+.logo_out{
+    flex:3;
+    gap: 2px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 8px;
+    font-weight: 600;
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+}
+.logo:hover{
+    cursor: pointer;
+    color: blueviolet;
+    
+    
+
+}
+.logo_name:hover{
+}
+.logo_image:hover{
+}
+.logo_color{
+    fill: white;
+}
+.logo_color:hover{
+}
