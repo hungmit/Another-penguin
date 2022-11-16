@@ -128,4 +128,5 @@ a:hover::after{
     fill: white;
 }
 .logo_color:hover{
+    fill:blueviolet;
 }
